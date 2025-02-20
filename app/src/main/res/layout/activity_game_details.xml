@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/player1Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Player 1 Name" />
+
+    <EditText
+        android:id="@+id/player2Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Player 2 Name" />
+
+    <EditText
+        android:id="@+id/player3Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Player 3 Name" />
+
+    <EditText
+        android:id="@+id/player4Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Player 4 Name" />
+
+    <EditText
+        android:id="@+id/gameLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Game Location" />
+
+    <EditText
+        android:id="@+id/gameDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Game Date" />
+
+    <EditText
+        android:id="@+id/betUnits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Bet Units" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next" />
+
+</LinearLayout>
