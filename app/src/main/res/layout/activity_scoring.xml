@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Hole Number Input -->
+    <TextView
+        android:id="@+id/holeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hole Number" />
+
+    <EditText
+        android:id="@+id/holeNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Enter hole (1-18)" />
+
+    <!-- Player 1 -->
+    <TextView
+        android:id="@+id/player1Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 1" />
+
+    <EditText
+        android:id="@+id/player1Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Score" />
+
+    <!-- Player 2 -->
+    <TextView
+        android:id="@+id/player2Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 2" />
+
+    <EditText
+        android:id="@+id/player2Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Score" />
+
+    <!-- Player 3 -->
+    <TextView
+        android:id="@+id/player3Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 3" />
+
+    <EditText
+        android:id="@+id/player3Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Score" />
+
+    <!-- Player 4 -->
+    <TextView
+        android:id="@+id/player4Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 4" />
+
+    <EditText
+        android:id="@+id/player4Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Score" />
+
+    <!-- Submit Score Button -->
+    <Button
+        android:id="@+id/submitScoreButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Score" />
+
+    <!-- Next Button to Results -->
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next" />
+
+</LinearLayout>

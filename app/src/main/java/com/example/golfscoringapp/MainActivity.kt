@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import android.content.Intent
 
 class MainActivity : AppCompatActivity() {
 
-    // Declare views here to use them throughout the class
     private lateinit var player1Name: EditText
     private lateinit var player2Name: EditText
     private lateinit var player3Name: EditText
@@ -34,9 +34,6 @@ class MainActivity : AppCompatActivity() {
 
         // Set up click listener for the next button
         nextButton.setOnClickListener {
-            // Here you would typically validate inputs, save data, and navigate to the next screen.
-            // For now, we'll just show a toast to indicate that the button is working.
-
             val p1Name = player1Name.text.toString().trim()
             val p2Name = player2Name.text.toString().trim()
             val p3Name = player3Name.text.toString().trim()
@@ -48,8 +45,25 @@ class MainActivity : AppCompatActivity() {
             if (p1Name.isEmpty() || p2Name.isEmpty() || p3Name.isEmpty() || p4Name.isEmpty() || location.isEmpty() || date.isEmpty() || units.isEmpty()) {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Details Saved! Proceeding to Next Step...", Toast.LENGTH_SHORT).show()
-                // Here you would typically start the next activity for scoring or save data to a database
+                // Validate bet units is a number
+                val betUnitsValue = units.toIntOrNull()
+                if (betUnitsValue == null || betUnitsValue <= 0) {
+                    Toast.makeText(this, "Bet units must be a positive number", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Details Saved! Proceeding to Next Step...", Toast.LENGTH_SHORT).show()
+
+                    // Prepare intent to navigate to ScoringActivity
+                    val intent = Intent(this, ScoringActivity::class.java).apply {
+                        putExtra("PLAYER_1_NAME", p1Name)
+                        putExtra("PLAYER_2_NAME", p2Name)
+                        putExtra("PLAYER_3_NAME", p3Name)
+                        putExtra("PLAYER_4_NAME", p4Name)
+                        putExtra("GAME_LOCATION", location)
+                        putExtra("GAME_DATE", date)
+                        putExtra("BET_UNITS", betUnitsValue)
+                    }
+                    startActivity(intent)
+                }
             }
         }
     }
