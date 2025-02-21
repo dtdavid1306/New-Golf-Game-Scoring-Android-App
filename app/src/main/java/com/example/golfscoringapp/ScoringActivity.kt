@@ -34,8 +34,8 @@ class ScoringActivity : AppCompatActivity() {
         val p2Name = intent.getStringExtra("PLAYER_2_NAME") ?: "Player 2"
         val p3Name = intent.getStringExtra("PLAYER_3_NAME") ?: "Player 3"
         val p4Name = intent.getStringExtra("PLAYER_4_NAME") ?: "Player 4"
-        val location = intent.getStringExtra("GAME_LOCATION")
-        val date = intent.getStringExtra("GAME_DATE")
+        val location = intent.getStringExtra("GAME_LOCATION") ?: ""
+        val date = intent.getStringExtra("GAME_DATE") ?: ""
         val betUnits = intent.getIntExtra("BET_UNITS", 0)
 
         // Initialize views
@@ -98,11 +98,18 @@ class ScoringActivity : AppCompatActivity() {
             }
         }
 
-        // Next button logic (placeholder until ResultsActivity is implemented)
+        // Next button to proceed to results
         nextButton.setOnClickListener {
             if (scores.all { playerScores -> playerScores.all { it > 0 } }) {
-                // Placeholder for navigation to ResultsActivity
-                Toast.makeText(this, "All scores entered, ready for results (ResultsActivity not yet implemented)", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, ResultsActivity::class.java).apply {
+                    putExtra("PLAYER_1_NAME", p1Name)
+                    putExtra("PLAYER_2_NAME", p2Name)
+                    putExtra("PLAYER_3_NAME", p3Name)
+                    putExtra("PLAYER_4_NAME", p4Name)
+                    putExtra("SCORES", scores)
+                    putExtra("BET_UNITS", betUnits)
+                }
+                startActivity(intent)
             } else {
                 Toast.makeText(this, "Please enter scores for all 18 holes", Toast.LENGTH_SHORT).show()
             }

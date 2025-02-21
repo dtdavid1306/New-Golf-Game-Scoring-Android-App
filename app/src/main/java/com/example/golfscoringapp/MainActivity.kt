@@ -45,14 +45,12 @@ class MainActivity : AppCompatActivity() {
             if (p1Name.isEmpty() || p2Name.isEmpty() || p3Name.isEmpty() || p4Name.isEmpty() || location.isEmpty() || date.isEmpty() || units.isEmpty()) {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
             } else {
-                // Validate bet units is a number
                 val betUnitsValue = units.toIntOrNull()
                 if (betUnitsValue == null || betUnitsValue <= 0) {
                     Toast.makeText(this, "Bet units must be a positive number", Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(this, "Details Saved! Proceeding to Next Step...", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Details Saved! Proceeding to Scoring...", Toast.LENGTH_SHORT).show()
 
-                    // Prepare intent to navigate to ScoringActivity
                     val intent = Intent(this, ScoringActivity::class.java).apply {
                         putExtra("PLAYER_1_NAME", p1Name)
                         putExtra("PLAYER_2_NAME", p2Name)

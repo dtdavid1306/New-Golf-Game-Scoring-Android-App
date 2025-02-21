@@ -80,7 +80,6 @@ class ResultsActivity : AppCompatActivity() {
                     winnings[teamPairs[set][2]] += 2 * betUnits
                     winnings[teamPairs[set][3]] += 2 * betUnits
                 } else {
-                    // If lowest scores are tied, compare the second scores
                     val team1Second = team1Scores.maxOrNull() ?: continue
                     val team2Second = team2Scores.maxOrNull() ?: continue
                     if (team1Second < team2Second) {

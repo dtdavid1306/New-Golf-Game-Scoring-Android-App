@@ -13,7 +13,7 @@
         android:theme="@style/Theme.GolfScoringApp"
         tools:targetApi="31">
 
-        <!-- Main Activity (Game Details Page) -->
+        <!-- Game Details Page -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -25,18 +25,19 @@
             </intent-filter>
         </activity>
 
-        <!-- Scoring Activity (Scoring Page) -->
+        <!-- Scoring Page -->
         <activity
             android:name=".ScoringActivity"
             android:exported="false"
             android:label="Scoring"
             android:theme="@style/Theme.GolfScoringApp" />
+
+        <!-- Results Page -->
         <activity
             android:name=".ResultsActivity"
             android:exported="false"
             android:label="Results"
             android:theme="@style/Theme.GolfScoringApp" />
-
     </application>
 
 </manifest>
