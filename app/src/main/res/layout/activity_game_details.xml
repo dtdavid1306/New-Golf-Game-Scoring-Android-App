@@ -1,58 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
 
-    <EditText
-        android:id="@+id/player1Name"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Player 1 Name" />
+        android:text="Game Details"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_500"
+        android:layout_marginBottom="12dp" />
 
-    <EditText
-        android:id="@+id/player2Name"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/player1_name_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Player 2 Name" />
+        android:hint="Player 1 Name"
+        app:boxStrokeColor="@color/purple_200">
 
-    <EditText
-        android:id="@+id/player3Name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Player 3 Name" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/player4Name"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/player2_name_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Player 4 Name" />
+        android:hint="Player 2 Name"
+        app:boxStrokeColor="@color/purple_200"
+        android:layout_marginTop="8dp">
 
-    <EditText
-        android:id="@+id/gameLocation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Game Location" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/gameDate"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/player3_name_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Game Date" />
+        android:hint="Player 3 Name"
+        app:boxStrokeColor="@color/purple_200"
+        android:layout_marginTop="8dp">
 
-    <EditText
-        android:id="@+id/betUnits"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:hint="Bet Units" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/nextButton"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/player4_name_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Next" />
+        android:hint="Player 4 Name"
+        app:boxStrokeColor="@color/purple_200"
+        android:layout_marginTop="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/game_location_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Game Location"
+        app:boxStrokeColor="@color/purple_200"
+        android:layout_marginTop="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/game_date_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Game Date"
+        app:boxStrokeColor="@color/purple_200"
+        android:layout_marginTop="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bet_units_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Bet Units"
+        app:boxStrokeColor="@color/purple_200"
+        android:layout_marginTop="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        app:cornerRadius="8dp"
+        android:layout_marginTop="16dp"
+        style="@style/Widget.MaterialComponents.Button"
+        android:backgroundTint="@color/teal_200" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/to_scoring_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Scoring"
+        app:cornerRadius="8dp"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.MaterialComponents.Button"
+        android:backgroundTint="@color/teal_200" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/to_results_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Results"
+        app:cornerRadius="8dp"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.MaterialComponents.Button"
+        android:backgroundTint="@color/teal_200" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/to_summary_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Summary"
+        app:cornerRadius="8dp"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.MaterialComponents.Button"
+        android:backgroundTint="@color/teal_200" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/restart_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Restart Game"
+        app:cornerRadius="8dp"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.MaterialComponents.Button"
+        android:backgroundTint="@color/error_red" />
 
 </LinearLayout>

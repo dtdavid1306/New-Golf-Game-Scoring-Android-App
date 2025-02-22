@@ -6,12 +6,39 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <LinearLayout
-        android:id="@+id/results_layout"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Results Summary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_500"
+        android:layout_marginBottom="12dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/results_summary_recycler"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical" />
+        android:background="@android:color/white"
+        android:padding="8dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/summary_totals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/material_grey_50">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="14sp"
+            android:textColor="@color/black" />
+    </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/back_button"
@@ -44,10 +71,10 @@
         android:backgroundTint="@color/teal_200" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/to_summary_button"
+        android:id="@+id/to_results_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="To Summary"
+        android:text="To Results"
         app:cornerRadius="8dp"
         android:layout_marginTop="8dp"
         style="@style/Widget.MaterialComponents.Button"
